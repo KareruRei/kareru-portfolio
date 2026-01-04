@@ -9,21 +9,21 @@ function About() {
   const [currentTime, setCurrentTime] = useState('00:00:00')
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark')
   const skillsData = [
-      { title: "Python", img: "/pages/About/img/python.png", desc: "Projects, scripts, and algorithms" },
-      { title: "Java", img: "/pages/About/img/java.png", desc: "Projects, scripts, and algorithms" },
-      { title: "HTML", img: "/pages/About/img/html.png", desc: "Web pages and layouts" },
-      { title: "CSS", img: "/pages/About/img/css.jpg", desc: "Styling and responsive design" },
-      { title: "Javascript", img: "/pages/About/img/javascript.jpg", desc: "Web interactivity and logic" },
-      { title: "React", img: "/pages/About/img/react.png", desc: "UI components and apps" },
-      { title: "Tailwind CSS", img: "/pages/About/img/tailwind.png", desc: "Utility-first styling" },
-      { title: "GSAP", img: "/pages/About/img/gsap.png", desc: "Animations and effects" },
-      { title: "Electronics & Arduino", img: "/pages/About/img/arduino.png", desc: "Circuits and prototyping" },
+      { title: "Python", img: "python.png", desc: "Projects, scripts, and algorithms" },
+      { title: "Java", img: "java.png", desc: "Projects, scripts, and algorithms" },
+      { title: "HTML", img: "html.png", desc: "Web pages and layouts" },
+      { title: "CSS", img: "css.jpg", desc: "Styling and responsive design" },
+      { title: "Javascript", img: "javascript.jpg", desc: "Web interactivity and logic" },
+      { title: "React", img: "react.png", desc: "UI components and apps" },
+      { title: "Tailwind CSS", img: "tailwind.png", desc: "Utility-first styling" },
+      { title: "GSAP", img: "gsap.png", desc: "Animations and effects" },
+      { title: "Electronics & Arduino", img: "arduino.png", desc: "Circuits and prototyping" },
   ];
   const hobbiesData = [
-    { title: "Music Production", img: "/pages/About/hobbies/music.jpg", desc: "Creating beats and sound design" },
-    { title: "Gaming", img: "/pages/About/hobbies/game.jpg", desc: "Strategy and competitive play" },
-    { title: "Reading", img: "/pages/About/hobbies/books.jpg", desc: "Mangas, Manhwas and a bit of literature" },
-    { title: "Photography", img: "/pages/About/hobbies/photo.jpg", desc: "Visual storytelling" },
+    { title: "Music Production", img: "music.jpg", desc: "Creating beats and sound design" },
+    { title: "Gaming", img: "game.jpg", desc: "Strategy and competitive play" },
+    { title: "Reading", img: "books.jpg", desc: "Mangas, Manhwas and a bit of literature" },
+    { title: "Photography", img: "photo.jpg", desc: "Visual storytelling" },
   ];
 
   useEffect(() => {
@@ -190,7 +190,7 @@ function About() {
 
           <div className="hero-visual flex justify-end relative opacity-0 scale-95">
             <img
-              src="/pages/About/img/picture.jpg"
+              src="picture.jpg"
               alt="john doe headshot"
               className="w-[280px] md:w-[400px] rounded-full aspect-square object-cover grayscale transition-filter duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
             />

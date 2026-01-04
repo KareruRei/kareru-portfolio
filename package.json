@@ -1,6 +1,5 @@
 {
   "name": "kareru-portfolio",
-  "homepage": "https://KareruRei.github.io/Portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,8 +10,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://karerurei/github.io//kareru-portfolio",
   "dependencies": {
-    "gh-pages": "^6.3.0",
     "gsap": "^3.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -23,6 +22,7 @@
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",
     "vite": "^5.0.8"
