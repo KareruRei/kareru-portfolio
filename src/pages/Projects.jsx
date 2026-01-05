@@ -103,7 +103,7 @@ function Projects() {
 
         // this is where we animate the new active card text and link
         gsap.set(newActive.querySelectorAll('span'), { y: 200 })
-        gsap.to(newActive.querySelectorAll('span'), { y: 0, duration: 0.4, ease: 'power2.inOut' })
+        gsap.to(newActive.querySelectorAll('span'), { y: 0, duration: 0.02, ease: 'power2.inOut' })
         const link = newActive.querySelector('a')
         if (link) gsap.to(link, { opacity: 1, duration: 0.3, ease: 'power1.out' })
 
@@ -114,7 +114,6 @@ function Projects() {
         }
       })
   }
-
 
   // this is where we define function to move to the previous project card
   const handlePrev = () => {
@@ -173,15 +172,22 @@ function Projects() {
               style={{ backgroundColor: project.bgColor }}
               data-color={project.color}
             >
-              <div className="copy absolute top-[25%] left-[60%] -translate-x-1/2 -translate-y-1/2 w-full">
-                <h1 className="text-left text-[50px] font-heavy tracking-[-0.05em] uppercase font-satoshi opacity-0 pointer-events-none">
+              <div className="relative w-full h-full flex flex-col items-center justify-start pt-24">
+                <h1 className="text-left text-[50px] font-heavy tracking-[-0.05em] uppercase font-satoshi opacity-0 pointer-events-none animate-fadeIn">
                   {project.name}
                 </h1>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center text-sm text-white no-underline absolute top-5 right-5 transition-all duration-300 opacity-0 pointer-events-none"
+                >
+                  View Project
+                  <span className="ml-2 transform transition-transform duration-300 ease-in-out group-hover:translate-x-1">
+                    ↗
+                  </span>
+                </a>
               </div>
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-[13px] relative top-[5%] left-[85%] no-underline text-white inline-block opacity-0 pointer-events-none">
-                View Project
-                <span className="ml-2 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">↗</span>
-              </a>
             </div>
           ))}
         </div>
