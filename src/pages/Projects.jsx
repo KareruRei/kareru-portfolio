@@ -7,11 +7,17 @@ function Projects() {
   const [isAnimating, setIsAnimating] = useState(false) // this is where we prevent overlapping animations
   const sliderRef = useRef(null) // this is where we reference the slider container for GSAP transformations
   // this is where we define constants for stack positioning
-  const MAX_VISIBLE = 6 
-  const Y_STEP = 12
+  const MAX_VISIBLE = 12
+  const Y_STEP = 5
   const Z_STEP = 80
   // this is where we define the list of projects to display
   const projects = [
+    { name: 'Arduino Face Recognition', color: '#950404', bgColor: '#1a0c0f', link: 'https://github.com/gabbrealz/Arduino_Face_Recognition' },
+    { name: 'Campus Marketplace', color: '#950404', bgColor: '#1a0c0f', link: 'https://github.com/KareruRei/Campus_Marketplace' },
+    { name: 'Student Management System', color: '#950404', bgColor: '#1a0c0f', link: 'https://github.com/KareruRei/Student-Management-System' },
+    { name: 'Motorcycle Inventory System', color: '#950404', bgColor: '#1a0c0f', link: 'https://github.com/KareruRei/Motorcycle-Inventory-System' },
+    { name: 'Valentine Quest', color: '#950404', bgColor: '#1a0c0f', link: 'https://github.com/KareruRei/Valentine-s...' },
+    { name: 'Arduino Ultrasonic Sensor', color: '#950404', bgColor: '#1a0c0f', link: 'https://github.com/KareruRei/Arduino_Ultrasonic_Sensor' },
     { name: 'Diane', color: '#950404', bgColor: '#1a0c0f', link: 'https://tranquil-pothos-181adb.netlify.app/' },
     { name: 'AgriConnect', color: '#800000', bgColor: '#1F0F12', link: 'https://github.com/KareruRei/AgriConnect' },
     { name: 'Mr. Facilitator', color: '#5C1A1A', bgColor: '#1E1416', link: 'https://github.com/KareruRei/Mr.-Facilitator' },
