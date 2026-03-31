@@ -248,7 +248,7 @@ function About() { // this is where the About component starts
               Capabilities
             </h2>
             <p className="text-[#9a9a9a] leading-[1.6] opacity-0 translate-y-[20px]">
-              Academic and personal projects showcasing my skills.
+              These are my skills. 
             </p>
           </div>
 
@@ -411,19 +411,19 @@ function About() { // this is where the About component starts
           }
         }
         @keyframes scroll {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
+          from { transform: translate3d(0,0,0); }
+          to { transform: translate3d(-50%,0,0); }
         }
         @keyframes scroll-reverse {
-          from { transform: translateX(-50%); }
-          to { transform: translateX(0); }
+          from { transform: translate3d(-50%,0,0); }
+          to { transform: translate3d(0,0,0); }
         }
-        .animate-scroll {
-          animation: scroll 60s linear infinite;
-        }
-        .animate-scroll-reverse {
-          animation: scroll-reverse 60s linear infinite;
-        }
+        /* make marquee smoother and prevent layout jumps */
+        .skills-track { will-change: transform; display: flex; }
+        .skills-track > * { flex: 0 0 auto; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+        .animate-scroll, .animate-scroll-reverse { animation-timing-function: linear; animation-iteration-count: infinite; will-change: transform; animation-play-state: running; }
+        .animate-scroll { animation-name: scroll; animation-duration: 60s; }
+        .animate-scroll-reverse { animation-name: scroll-reverse; animation-duration: 60s; }
       `}</style>
     </div>
   )
